@@ -1,0 +1,26 @@
+MC II
+Grupo: Isabela, Leonando e Eduardo
+
+Comparativo de métodos?
+componente funcional - análise de ponto de função
+ponto de função automatizado
+
+Experimento como os participantes - survey? análise dos resultados das resposta?
+medição de ponto de função
+
+indicação de repositório com os dados? 
+
+type script: http://www.typescriptlang.org
+
+
+Grupo: Silvia, Francisco, Felipe
+
+survey de avaliação da ferramenta moodle
+
+teoria de difusao da informacao
+modelagem de equacoes estruturais
+
+como mediram os constructos?
+300 simulacoes
+
+http://lab.hakim.se/reveal-js/#/
