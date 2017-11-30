@@ -2,7 +2,7 @@
 # setwd("~/Documents/Research/unirio/MCII/finalAssignment")
 
 ## Tarefa 1: Gerar a analise do criterio de parada para o algoritmo genetico (pg. 1064)
-data_t1 <- read.table("data_t1.txt", header = T, sep = "\t")
+data_t1 <- read.table("data_t1.txt", header = T)
 
 # Subset das instâncias
 

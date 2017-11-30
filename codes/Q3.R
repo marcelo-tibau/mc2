@@ -2,7 +2,7 @@
 # setwd("~/Documents/Research/unirio/MCII/finalAssignment")
 
 ## Tarefa 3: Gerar a analise comparativa de qualidade para cada instancia entre a NSGAII, MAR, SH, CPM (Tabela 2)
-data_t3 <- read.table("data_t3-t4.txt", header = T, sep = "\t")
+data_t3 <- read.table("data_t3-t4.txt", header = T)
 
 # Analise I0
 

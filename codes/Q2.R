@@ -2,7 +2,7 @@
 # setwd("~/Documents/Research/unirio/MCII/finalAssignment")
 
 ## Tarefa 2: Gerar a analise do criterio de tamanho de populacao do algoritmo genetico (pg. 1064).
-data_t2 <- read.table("data_t2.txt", header = T, sep = "\t")
+data_t2 <- read.table("data_t2.txt", header = T)
 
 # Subset das instâncias
 inst_I0_2 <- subset(data_t2, inst == "I0");
