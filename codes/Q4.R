@@ -2,7 +2,7 @@
 # setwd("~/Documents/Research/unirio/MCII/finalAssignment")
 
 ## Tarefa 4: Gerar a analise de tamanho de efeito: comparativo de qualidade para cada instancia e pares de abordagens NSGAII x MAR , NSGAII x SH e NSGAII x CPM (pagina 1065)
-data_t4 <- read.table("data_t3-t4.txt", header = T)
+
 DIGIT <- 4
 
 AMeasure <- function(r1, r2) 
