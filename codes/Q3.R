@@ -4,59 +4,49 @@
 ## Tarefa 3: Gerar a analise comparativa de qualidade para cada instancia entre a NSGAII, MAR, SH, CPM (Tabela 2)
 data_t3 <- read.table("data_t3-t4.txt", header = T)
 
-# Analise I0
+DIGIT = 4
 
-instI0 <- subset(data_t3, inst == "I0" & config == "nsga150k2x"); 
+instancias <- unique(data_t3$inst)
 
-meanI0Best <- mean(instI0$best); 
-meanI0Best
-
-sdI0Best <- sd(instI0$best);
-sdI0Best
-
-# Analise I1
-
-instI1 <- subset(data_t3, inst == "I1" & config == "nsga150k2x"); 
-
-meanI1Best <- mean(instI1$best); 
-meanI1Best
-
-sdI1Best <- sd(instI1$best);
-sdI1Best
-
-# Analise I2
-
-instI2 <- subset(data_t3, inst == "I2" & config == "nsga150k2x"); 
-
-meanI2Best <- mean(instI2$best); 
-meanI2Best
-
-sdI2Best <- sd(instI2$best);
-sdI2Best
-
-# Analise I3
-instI3 <- subset(data_t3, inst == "I3" & config == "nsga150k2x"); 
-
-meanI3Best <- mean(instI3$best); 
-meanI3Best
-
-sdI3Best <- sd(instI3$best);
-sdI3Best
-
-# Analise I4
-instI4 <- subset(data_t3, inst == "I4" & config == "nsga150k2x"); 
-
-meanI4Best <- mean(instI4$best); 
-meanI4Best
-
-sdI4Best <- sd(instI4$best);
-sdI4Best
-
-# Analise I5
-instI5 <- subset(data_t3, inst == "I5" & config == "nsga150k2x"); 
-
-meanI5Best <- mean(instI5$best); 
-meanI5Best
-
-sdI5Best <- sd(instI5$best);
-sdI5Best
+for (instancia in instancias)
+{
+  print("-----------------------------------------------------")
+  print(instancia)
+  print("-----------------------------------------------------")
+  
+  mar_data = data_t3[ which(data_t3$config == 'MAR' & data_t3$inst == instancia), ]
+  mar = cbind(
+    best = mar_data$best,
+    hv = mar_data$hv,
+    gd = mar_data$gd
+  )
+  
+  sh_data = data_t3[ which(data_t3$config == 'SH' & data_t3$inst == instancia), ]
+  sh = cbind(
+    best = sh_data$best,
+    hv = sh_data$hv,
+    gd = sh_data$gd
+  )
+  
+  cpm_data = data_t3[ which(data_t3$config == 'CPM' & data_t3$inst == instancia), ]
+  cpm = cbind(
+    best = cpm_data$best,
+    hv = cpm_data$hv,
+    gd = cpm_data$gd
+  )
+  
+  nsga_data = data_t3[ which(data_t3$config == 'nsga150k2x' & data_t3$inst == instancia), ]
+  nsga = cbind(
+    best = paste(round(mean(nsga_data$best), digits=DIGIT), "±", round(sd(nsga_data$best), digits=DIGIT)),
+    hv = paste(round(mean(nsga_data$hv), digits=DIGIT), "±",round(sd(nsga_data$hv), digits=DIGIT)),
+    gd = paste(round(mean(nsga_data$gd), digits=DIGIT), "±", round(sd(nsga_data$gd), digits=DIGIT))
+  )
+  
+  tab2 <- data.frame(row.names= c('I_CV','I_HV','I_GD'),
+                     NSGAII = c(summary(nsga)),
+                     MAR = c(mar),
+                     SH = c(sh),
+                     CPM = c(cpm)
+  )
+  print(tab2)
+}
