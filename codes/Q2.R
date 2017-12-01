@@ -14,17 +14,17 @@ inst_I5_2 <- subset(data_t2, inst == "I5");
 
 # Kruskal test
 
-kruskal.test(hv~config, data=inst_I0_2);
+kruskal.test(gd~config, data=inst_I0_2);
 
-kruskal.test(hv~config, data=inst_I1_2);
+kruskal.test(gd~config, data=inst_I1_2);
 
-kruskal.test(hv~config, data=inst_I2_2);
+kruskal.test(gd~config, data=inst_I2_2);
 
-kruskal.test(hv~config, data=inst_I3_2);
+kruskal.test(gd~config, data=inst_I3_2);
 
-kruskal.test(hv~config, data=inst_I4_2);
+kruskal.test(gd~config, data=inst_I4_2);
 
-kruskal.test(hv~config, data=inst_I5_2);
+kruskal.test(gd~config, data=inst_I5_2);
 
 # Pairwise Wilcox
 
