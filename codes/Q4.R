@@ -50,3 +50,5 @@ print(hv_result)
 print("GD ===============")
 print(gd_result)
 
+#### GD (quanto mais próximo de 1, pior o resultado)
+#### HD (tem alguns 0 mesmo)
