@@ -29,10 +29,13 @@ for (instance_name in instances) {
     hv = paste(round(mean(subdata$hv), digits=DIGIT), "±",round(sd(subdata$hv), digits=DIGIT)),
     gd = paste(round(mean(subdata$gd) * 100, digits=DIGIT), "±", round(sd(subdata$gd) * 100, digits=DIGIT))
   )
-  
+  print("------------------------------------------")
+  print(as.character(instance_names[instance_name]))
+  tab2 <- data.frame(row.names= c('I_CV','I_HV','I_GD'),
+                     NSGAII = c(nsga150k2x),
+                     NSGA_NE = c(nsga150k2xse)
+  )
+  print(tab2)
   # result <- matrix(data=c(nsga150k2x, nsga150k2xse), nrow=3, ncol=2)
-  print("====================")
-  print(instance_names[instance_name])
-  print(nsga150k2x)
-  print(nsga150k2xse)
+  
 }
