@@ -37,9 +37,9 @@ for (instancia in instancias)
   
   nsga_data = data_t3[ which(data_t3$config == 'nsga150k2x' & data_t3$inst == instancia), ]
   nsga = cbind(
-    best = paste(round(mean(nsga_data$best), digits=DIGIT), "±", round(sd(nsga_data$best), digits=DIGIT)),
-    hv = paste(round(mean(nsga_data$hv), digits=DIGIT), "±",round(sd(nsga_data$hv), digits=DIGIT)),
-    gd = paste(round(mean(nsga_data$gd), digits=DIGIT), "±", round(sd(nsga_data$gd), digits=DIGIT))
+    best = paste(round(mean(nsga_data$best), digits=DIGIT), "Â±", round(sd(nsga_data$best), digits=DIGIT)),
+    hv = paste(round(mean(nsga_data$hv), digits=DIGIT), "Â±",round(sd(nsga_data$hv), digits=DIGIT)),
+    gd = paste(round(mean(nsga_data$gd), digits=DIGIT), "Â±", round(sd(nsga_data$gd), digits=DIGIT))
   )
   
   tab2 <- data.frame(row.names= c('I_CV','I_HV','I_GD'),
