@@ -1,7 +1,7 @@
 # setwd("C:/Users/Marcelo/iCloudDrive/Work/Casa - Pessoal/0_Project CP/Study/MESTRADO/UNIRIO/2017/MESTRADO/Disciplinas/Metodologia_Cientifica_II/finalAssignment")
 # setwd("~/Documents/Research/unirio/MCII/finalAssignment")
 
-## Tarefa 1: Gerar a analise do criterio de parada para o algoritmo genetico (pg. 1064)
+## Tarefa 2: Gerar a analise do criterio de tamanho de populacao do algoritmo genetico (pg. 1064).
 data_t2 <- read.table("dados/data_t2.txt", header = T)
 
 data_t2$config <- gsub("nsga150k","",data_t2$config)
